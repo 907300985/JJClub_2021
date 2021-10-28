@@ -11,6 +11,8 @@ import java.util.Scanner;
  */
 public class TestSyc {
     public static void main(String[] args) {
+        Window w = new Window();
+        w.initWindow();
         Date d = new Date();
         System.out.println("北京时间 ： "+d);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日   HH:mm:ss");
