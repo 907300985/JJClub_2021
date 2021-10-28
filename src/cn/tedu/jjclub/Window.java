@@ -26,6 +26,23 @@ public class Window{
         Container contentPane = jf.getContentPane();
         //contentPane.setLayout(new BorderLayout());
 
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        //获取图片  三种图片格式都可以
+        java.awt.Image img = tk.getImage("src\\rimu.jpg");
+        // 给窗体设置图
+        jf.setIconImage(img);
+
+        /*改变窗口背景*/
+        Icon im = new ImageIcon("src\\rimu.jpg");
+        //将图片添加到JLable标签
+        JLabel jLabel = new JLabel(im);
+        //设置标签的大小
+        jLabel.setBounds(0,0, 400,300 );
+        //将图片添加到窗口
+        //jf.add(jLabel);
+
+
+
         jta = new JTextArea(10, 15);
         jta.setText(s);
         jta.setTabSize(4);
@@ -33,6 +50,7 @@ public class Window{
         jta.setLineWrap(true);// 激活自动换行功能
         jta.setWrapStyleWord(true);// 激活断行不断字功能
         jta.setBackground(new Color(82, 119, 204));
+        //jta.add(jLabel);
 
         jscrollPane = new JScrollPane(jta);
         jpanel = new JPanel();
@@ -45,6 +63,7 @@ public class Window{
         jpanel.add(jb1);
         jpanel.add(jb2);
         jpanel.add(jb3);
+
 
         contentPane.add(jscrollPane, BorderLayout.CENTER);
         contentPane.add(jpanel, BorderLayout.SOUTH);
