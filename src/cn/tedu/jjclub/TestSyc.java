@@ -23,7 +23,6 @@ public class TestSyc {
         TrueMan man = new TrueMan();
         System.out.println(man.op(a));
 
-        //18838883300 冲啊
         for (int i = 0; i < 10 ; i++) {
             System.out.println(man.op(a)+"天下第一");
         }
