@@ -32,7 +32,7 @@ public class Window{
         jta.setFont(new Font("标楷体", Font.BOLD, 16));
         jta.setLineWrap(true);// 激活自动换行功能
         jta.setWrapStyleWord(true);// 激活断行不断字功能
-        jta.setBackground(new Color(189,156,125));
+        jta.setBackground(new Color(82, 119, 204));
 
         jscrollPane = new JScrollPane(jta);
         jpanel = new JPanel();
@@ -41,7 +41,7 @@ public class Window{
         jb1 = new JButton("别按");
         jb2 = new JButton("都没");
         jb3 = new JButton("吊用");
-
+        jb1.setBackground(new Color(245, 9, 9));
         jpanel.add(jb1);
         jpanel.add(jb2);
         jpanel.add(jb3);
