@@ -18,7 +18,7 @@ public class TestSyc {
         Long l=18838883300L;
         System.out.println("小明随时Call："+l);
         System.out.println("北京时间："+s);
-        System.out.println("兄弟们，输入0-6随便一个整数");
+        System.out.println("兄弟们，输入0-6随便一个整数：");
         int a = new Scanner(System.in).nextInt();
         TrueMan man = new TrueMan();
         System.out.println(man.op(a));
