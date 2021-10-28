@@ -15,7 +15,7 @@ import java.awt.event.WindowEvent;
 
 public class Window{
     JFrame jf;
-    JPanel jpanel;
+    JPanel pan;
     JButton jb1, jb2, jb3;
     JTextArea jta = null;
     JScrollPane jscrollPane;
@@ -24,54 +24,59 @@ public class Window{
 
         jf = new JFrame("啥也不是的 窗口");
         Container contentPane = jf.getContentPane();
-        //contentPane.setLayout(new BorderLayout());
+        contentPane.setLayout(new BorderLayout());
 
+        /*这一段代码可以自定义窗口图标*/
         Toolkit tk = Toolkit.getDefaultToolkit();
-        //获取图片  三种图片格式都可以
-        java.awt.Image img = tk.getImage("src\\rimu.jpg");
-        // 给窗体设置图
+        java.awt.Image img = tk.getImage("src\\jj3.png"); //获取图片  三种图片格式都可以
         jf.setIconImage(img);
 
-        /*改变窗口背景*/
-        Icon im = new ImageIcon("src\\rimu.jpg");
-        //将图片添加到JLable标签
-        JLabel jLabel = new JLabel(im);
-        //设置标签的大小
-        jLabel.setBounds(0,0, 400,300 );
+        /*改变窗口的背景*/
+        Icon bg = new ImageIcon("src\\liuhua.png");
+        JLabel jLabel = new JLabel(bg);
+        jLabel.setBounds(0,0, 400,280 );
+        jf.getLayeredPane().add(jLabel,new Integer(Integer.MIN_VALUE));
         //将图片添加到窗口
-        //jf.add(jLabel);
-
+        pan = (JPanel) jf.getContentPane();
+        pan.setOpaque(false);
+        pan.setLayout(new FlowLayout());
 
 
         jta = new JTextArea(10, 15);
         jta.setText(s);
+
         jta.setTabSize(4);
         jta.setFont(new Font("标楷体", Font.BOLD, 16));
+
         jta.setLineWrap(true);// 激活自动换行功能
         jta.setWrapStyleWord(true);// 激活断行不断字功能
-        jta.setBackground(new Color(82, 119, 204));
-        //jta.add(jLabel);
+        //jta.setBackground(new Color(255, 255, 255, 255));
+        jta.setOpaque(false);
+        /*先将文本域设置为透明
+        * 再将jscrollPane设置为透明
+        * 然后getViewport设置为透明*/
 
         jscrollPane = new JScrollPane(jta);
-        jpanel = new JPanel();
-        jpanel.setLayout(new GridLayout(1, 3));
+        jscrollPane.setOpaque(false);
+        jscrollPane.getViewport().setOpaque(false);
+
+        pan = new JPanel();
+        pan.setLayout(new GridLayout(1, 3));
 
         jb1 = new JButton("别按");
         jb2 = new JButton("都没");
         jb3 = new JButton("吊用");
         jb1.setBackground(new Color(245, 9, 9));
-        jpanel.add(jb1);
-        jpanel.add(jb2);
-        jpanel.add(jb3);
-
+        pan.add(jb1);
+        pan.add(jb2);
+        pan.add(jb3);
+        //contentPane.add(jLabel);
 
         contentPane.add(jscrollPane, BorderLayout.CENTER);
-        contentPane.add(jpanel, BorderLayout.SOUTH);
+        contentPane.add(pan, BorderLayout.SOUTH);
 
         jf.setSize(400, 300);
         jf.setLocation(400, 200);
         jf.setVisible(true);
-
     }
-
 }
