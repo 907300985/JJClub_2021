@@ -17,7 +17,6 @@ public class TrueMan { //真男人就填名字
             case 4:s = "天龙";break;
             case 5:s = "小路";break;
             case 6:s = "空";break;
-           
         }
         return s;
     }
