@@ -24,7 +24,7 @@ public class Window{
 
         jf = new JFrame("啥也不是的 窗口");
         Container contentPane = jf.getContentPane();
-        contentPane.setLayout(new BorderLayout());
+        //contentPane.setLayout(new BorderLayout());
 
         jta = new JTextArea(10, 15);
         jta.setText(s);
@@ -38,7 +38,7 @@ public class Window{
         jpanel = new JPanel();
         jpanel.setLayout(new GridLayout(1, 3));
 
-        jb1 = new JButton("按钮");
+        jb1 = new JButton("别按");
         jb2 = new JButton("都没");
         jb3 = new JButton("吊用");
 
