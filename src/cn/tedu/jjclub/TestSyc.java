@@ -24,7 +24,7 @@ public class TestSyc {
         System.out.println(man.op(a));
 
         for (int i = 0; i < 10 ; i++) {
-            System.out.println(man.op(a)+"天下第一");
+            System.out.println(man.op(a)+"吃啥都行");
         }
     }
 }
