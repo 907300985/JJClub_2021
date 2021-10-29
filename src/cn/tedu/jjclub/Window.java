@@ -32,7 +32,7 @@ public class Window{
         jf.setIconImage(img);
 
         /*改变窗口的背景*/
-        Icon bg = new ImageIcon("src\\images\\liuhua.png");
+        Icon bg = new ImageIcon("src\\images\\rimu.jpg");
         JLabel jLabel = new JLabel(bg);
         jLabel.setBounds(0,0, 400,280 );
         jf.getLayeredPane().add(jLabel,new Integer(Integer.MIN_VALUE));
