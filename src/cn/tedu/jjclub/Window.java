@@ -28,11 +28,11 @@ public class Window{
 
         /*这一段代码可以自定义窗口图标*/
         Toolkit tk = Toolkit.getDefaultToolkit();
-        java.awt.Image img = tk.getImage("src\\jj3.png"); //获取图片  三种图片格式都可以
+        java.awt.Image img = tk.getImage("src\\images\\jj3.png"); //获取图片  三种图片格式都可以
         jf.setIconImage(img);
 
         /*改变窗口的背景*/
-        Icon bg = new ImageIcon("src\\liuhua.png");
+        Icon bg = new ImageIcon("src\\images\\liuhua.png");
         JLabel jLabel = new JLabel(bg);
         jLabel.setBounds(0,0, 400,280 );
         jf.getLayeredPane().add(jLabel,new Integer(Integer.MIN_VALUE));
