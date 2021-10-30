@@ -18,7 +18,7 @@ public class Main extends Application {
     public static void start2(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(Main.class.getResource("cgbUI2.fxml"));
         primaryStage.setTitle("JAVA大数据登陆成功");
-        primaryStage.setScene(new Scene(root, 600, 469));
+        primaryStage.setScene(new Scene(root, 910, 599));
         primaryStage.show();
     }
 
