@@ -10,5 +10,6 @@ public class Account {
         map.put("男帝","123");
         map.put("帅龙","456");
         map.put("一郎","789");
+        map.put("小明","1003");
     }
 }
