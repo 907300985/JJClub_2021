@@ -31,13 +31,13 @@ public class Controller {
             Stage stage=new Stage();
             we.start(stage);
         }else {
-            option(userName+"\n"+userpassword+"\n输入错误");
+            option(userName+"\n"+userpassword+"\n登陆失败");
         }
     }
 
     public void option(String message){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.titleProperty().set("提示");
+        alert.titleProperty().set("提示窗口");
         alert.headerTextProperty().set(message);
         alert.showAndWait();
     }
