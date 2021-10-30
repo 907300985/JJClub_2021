@@ -14,6 +14,7 @@ public class Main extends Application {
         primaryStage.setTitle("JAVA大数据登陆界面");
         primaryStage.setScene(new Scene(root, 600, 469));
         primaryStage.show();
+
     }
 
 
