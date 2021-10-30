@@ -24,7 +24,7 @@ public class Controller {
         String userpassword = password.getText();
         Account acc = new Account();
         if(acc.map.containsKey(userName) && acc.map.get(userName).equals(userpassword)){
-            option(userName+"\n"+userpassword+"\n登陆成功");
+            //option(userName+"\n"+userpassword+"\n登陆成功");
             Stage primaryStage=(Stage)loginBut.getScene().getWindow();
             primaryStage.close();
             WelcomeMain we=new WelcomeMain();
