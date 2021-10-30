@@ -22,7 +22,7 @@ public class Controller {
         String userName = user.getText();
         String userpassword = password.getText();
         Account acc = new Account();
-        if(userName.equals(acc.nd) && userpassword.equals(acc.ndPas)){
+        if(acc.map.containsKey(userName) && acc.map.get(userName).equals(userpassword)){
             option(userName+"\n"+userpassword+"\n登陆成功");
         }else {
             option(userName+"\n"+userpassword+"\n输入错误");

@@ -1,6 +1,13 @@
 package cgb.jjclub;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Account {
-    String nd = "男帝";
-    String ndPas = "123";
+    final static Map<String,String> map = new HashMap<>();
+    public Account(){
+        /*map输入自己的用户名和密码*/
+        map.put("男帝","123");
+        map.put("帅龙","456");
+    }
 }
