@@ -27,9 +27,8 @@ public class Controller {
             //option(userName+"\n"+userpassword+"\n登陆成功");
             Stage primaryStage=(Stage)loginBut.getScene().getWindow();
             primaryStage.close();
-            WelcomeMain we=new WelcomeMain();
             Stage stage=new Stage();
-            we.start(stage);
+            Main.start2(stage);
         }else {
             option(userName+"\n"+userpassword+"\n输入错误");
         }
