@@ -21,7 +21,12 @@ public class Controller {
     void login(ActionEvent event) {
         String userName = user.getText();
         String userpassword = password.getText();
-        option(userName+"\n"+userpassword);
+        Account acc = new Account();
+        if(userName.equals(acc.nd) && userpassword.equals(acc.ndPas)){
+            option(userName+"\n"+userpassword+"\n登陆成功");
+        }else {
+            option(userName+"\n"+userpassword+"\n输入错误");
+        }
     }
 
     public void option(String message){
