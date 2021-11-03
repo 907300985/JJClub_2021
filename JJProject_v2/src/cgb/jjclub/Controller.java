@@ -28,7 +28,7 @@ public class Controller {
             Stage primaryStage=(Stage)loginBut.getScene().getWindow();
             primaryStage.close();
             Stage stage=new Stage();
-            MainFunction.OtherUI(stage,"cgbUI2.fxml");
+            Main.OtherUI(stage,"cgbUI2.fxml");
         }else {
             option(userName+"\n"+userpassword+"\n登陆失败");
         }
